@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#bad idea to just map int ids. do not do that 
+#xinput --map-to-output 13 eDP-1
+#xinput --map-to-output 23 eDP-1
+
+herbstclient detect_monitors
+${HOME}/.config/polybar/launch.sh &>/dev/null
+xinput --map-to-output "ELAN2514:00 04F3:2817" eDP-1
